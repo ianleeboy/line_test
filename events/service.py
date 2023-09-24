@@ -119,22 +119,19 @@ def service_event(event):
                         "text": service['title'],
                         "wrap": True,
                         "weight": "bold",
-                        "size": "xl",
-                        "color":"#854955"
+                        "size": "xl"
                     },
                     {
                         "type": "text",
                         "text": service['duration'],
                         "size": "sm",
-                        "weight": "bold",
-                        "color":"BF827F"
+                        "weight": "bold"
                     },
                     {
                         "type": "text",
                         "text": service['description'],
                         "margin": "lg",
-                        "wrap": True,
-                        "color":"#CAA4A3"
+                        "wrap": True
                     },
                     {
                         "type": "box",
@@ -146,8 +143,7 @@ def service_event(event):
                             "wrap": True,
                             "weight": "bold",
                             "size": "xl",
-                            "flex": 0,
-                            "color":"#854955"
+                            "flex": 0
                         }
                         ],
                         "margin": "xl"
