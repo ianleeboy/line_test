@@ -32,7 +32,7 @@ services = {
         'title': '海鮮',
         'duration': '等待 20 mins',
         'description': '主廚精心設計的數道海鮮料理(適合6人以下)',
-        'price': '800'
+        'price': 'NT$ 800'
     },
 
     4:{
@@ -139,7 +139,7 @@ def service_event(event):
                         "contents": [
                         {
                             "type": "text",
-                            "text": f"NT$ {service['price']}",
+                            "text": f"{service['price']}",
                             "wrap": True,
                             "weight": "bold",
                             "size": "xl",

@@ -76,6 +76,8 @@ def handle_postback(event):
 
     if data.get('action') == 'service':
         service_event(event)
+    elif data.get('action') == 'select_date':
+        service_select_date_event(event)
     elif data.get('action') == 'select_time':
         service_select_time_event(event)
     elif data.get('action') == 'confirm':
