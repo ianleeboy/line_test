@@ -10,7 +10,7 @@ import datetime
 services = {
     1:{
         'category': '中式',
-        'img_url': 'https://i.imgur.com/rl7CRDq.jpg',
+        'img_url': 'https://i.imgur.com/x6neJti.jpg',
         'title': '家常菜',
         'duration': '等待 15 mins',
         'description': '嚴選在地地方料理(適合4人以下)',
@@ -19,7 +19,7 @@ services = {
     
     2:{
         'category': '中式',
-        'img_url': 'https://i.imgur.com/rl7CRDq.jpg',
+        'img_url': 'https://i.imgur.com/0k52inF.jpg',
         'title': '麵食類',
         'duration': '等待 25 mins',
         'description': '精選數道北方麵食的必吃料理(適合4人以下)',
@@ -28,7 +28,7 @@ services = {
 
     3:{
         'category': '中式',
-        'img_url': 'https://i.imgur.com/rl7CRDq.jpg',
+        'img_url': 'https://i.imgur.com/sidfS7p.jpg',
         'title': '海鮮',
         'duration': '等待 20 mins',
         'description': '主廚精心設計的數道海鮮料理(適合6人以下)',
@@ -37,16 +37,16 @@ services = {
 
     4:{
         'category': '西式',
-        'img_url': 'https://i.imgur.com/rl7CRDq.jpg',
+        'img_url': 'https://i.imgur.com/GihkzAZ.jpg',
         'title': '法式小點',
         'duration': '等待 30 mins',
-        'description': '造型薯條 & 特調醬',
+        'description': '經典法式餐點',
         'price': 'average NT200'
     },
 
     5:{
         'category': '西式',
-        'img_url': 'https://i.imgur.com/rl7CRDq.jpg',
+        'img_url': 'https://i.imgur.com/HU9TotJ.jpg',
         'title': '義大利麵',
         'duration': '等待 20 mins',
         'description': '紅醬＆白醬為主搭配口感極佳的手工麵',
@@ -55,7 +55,7 @@ services = {
 
     6:{
         'category': '西式',
-        'img_url': 'https://i.imgur.com/rl7CRDq.jpg',
+        'img_url': 'https://i.imgur.com/kJg3RvM.jpg',
         'title': '排餐類',
         'duration': '等待 15 mins',
         'description': '精心挑選肉品，雞豬牛羊一次滿足',
@@ -69,7 +69,7 @@ def service_category_event(event):
         template=ImageCarouselTemplate(
         columns = [
                 ImageCarouselColumn(
-                            image_url= 'https://i.imgur.com/rl7CRDq.jpg',
+                            image_url= 'https://i.imgur.com/XBOT85J.jpg',
                             action=PostbackAction(
                                 label= '中式菜餚',
                                 display_text= '想了解中式菜餚',
@@ -77,7 +77,7 @@ def service_category_event(event):
                             )
                 ),
                 ImageCarouselColumn(
-                            image_url= 'https://i.imgur.com/rl7CRDq.jpg',
+                            image_url= 'https://i.imgur.com/Qla6NoS.jpg',
                             action=PostbackAction(
                                 label= '西式餐點',
                                 display_text= '想了解西式餐點',
@@ -119,19 +119,22 @@ def service_event(event):
                         "text": service['title'],
                         "wrap": True,
                         "weight": "bold",
-                        "size": "xl"
+                        "size": "xl",
+                        "color":"#854955"
                     },
                     {
                         "type": "text",
                         "text": service['duration'],
                         "size": "sm",
-                        "weight": "bold"
+                        "weight": "bold",
+                        "color":"BF827F"
                     },
                     {
                         "type": "text",
                         "text": service['description'],
                         "margin": "lg",
-                        "wrap": True
+                        "wrap": True,
+                        "color":"#CAA4A3"
                     },
                     {
                         "type": "box",
@@ -143,7 +146,8 @@ def service_event(event):
                             "wrap": True,
                             "weight": "bold",
                             "size": "xl",
-                            "flex": 0
+                            "flex": 0,
+                            "color":"#854955"
                         }
                         ],
                         "margin": "xl"
@@ -164,7 +168,7 @@ def service_event(event):
                         "data": f"action=select_date&service_id={service_id}",
                         "displayText": f"我想預約【{service['title']} {service['duration']}】"
                         },
-                        "color": "#b28530"
+                        "color": "#EA5B1F"
                     }
                     ]
                 }
