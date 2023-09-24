@@ -69,7 +69,7 @@ def service_category_event(event):
         template=ImageCarouselTemplate(
         columns = [
                 ImageCarouselColumn(
-                            image_url= 'https://i.imgur.com/XBOT85J.jpg',
+                            image_url= 'https://i.imgur.com/sADd21I.jpg',
                             action=PostbackAction(
                                 label= '中式菜餚',
                                 display_text= '想了解中式菜餚',
@@ -77,7 +77,7 @@ def service_category_event(event):
                             )
                 ),
                 ImageCarouselColumn(
-                            image_url= 'https://i.imgur.com/Qla6NoS.jpg',
+                            image_url= 'https://i.imgur.com/5ZMViDq.jpg',
                             action=PostbackAction(
                                 label= '西式餐點',
                                 display_text= '想了解西式餐點',
