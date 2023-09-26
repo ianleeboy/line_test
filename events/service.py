@@ -104,34 +104,37 @@ def service_event(event):
                 "type": "bubble",
                 "hero": {
                     "type": "image",
+                    "url": service['img_url'],
                     "size": "full",
                     "aspectRatio": "20:13",
-                    "aspectMode": "cover",
-                    "url": service['img_url']
+                    "aspectMode": "cover"
                 },
                 "body": {
                     "type": "box",
                     "layout": "vertical",
-                    "spacing": "sm",
                     "contents": [
                     {
                         "type": "text",
                         "text": service['title'],
-                        "wrap": True,
                         "weight": "bold",
-                        "size": "xl"
+                        "wrap": True,
+                        "size": "xl",
+                        "color": "#854955"
                     },
                     {
                         "type": "text",
                         "text": service['duration'],
                         "size": "sm",
-                        "weight": "bold"
+                        "weight": "bold",
+                        "color": "#BF827F"
                     },
                     {
                         "type": "text",
                         "text": service['description'],
+                        "wrap": True,
+                        "size": "md",
                         "margin": "lg",
-                        "wrap": True
+                        "color": "#CAA4A3"
                     },
                     {
                         "type": "box",
@@ -140,33 +143,35 @@ def service_event(event):
                         {
                             "type": "text",
                             "text": f"{service['price']}",
-                            "wrap": True,
-                            "weight": "bold",
                             "size": "xl",
+                            "weight": "bold",
+                            "wrap": True,
+                            "color": "#854955",
                             "flex": 0
                         }
                         ],
                         "margin": "xl"
                     }
-                    ]
+                    ],
+                    "spacing": "sm"
                 },
                 "footer": {
                     "type": "box",
                     "layout": "vertical",
-                    "spacing": "sm",
                     "contents": [
                     {
                         "type": "button",
-                        "style": "primary",
                         "action": {
                         "type": "postback",
                         "label": "預約",
                         "data": f"action=select_date&service_id={service_id}",
                         "displayText": f"我想預約【{service['title']} {service['duration']}】"
                         },
+                        "style": "primary",
                         "color": "#EA5B1F"
                     }
-                    ]
+                    ],
+                    "spacing": "sm"
                 }
                 }
 
@@ -227,7 +232,7 @@ def service_select_time_event(event):
      
     data = dict(parse_qsl(event.postback.data))
 
-    available_time = ['11:00', '12:00', '13:00', '14:00']
+    available_time = ['11:00', '12:00', '18:00', '19:00']
 
     quick_reply_buttons = []
 
